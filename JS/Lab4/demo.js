@@ -1,6 +1,20 @@
-var start = 0;
-var end = 2;
-var imgContainer = document.getElementsByClassName("image-container");
+var index = 0;
+var imgSources = [
+  "images/Backend.svg",
+  "images/frontend.svg",
+  "Images/database.svg",
+  "Images/problem-solving.svg",
+  "Images/github.svg",
+];
+var captions = [
+  "Backend",
+  "Frontend",
+  "Database",
+  "Problem solving",
+  "Git&Github",
+];
+var img = document.getElementById("slider-img");
+var caption = document.getElementById("slider-caption");
 
 var tagName = document.getElementById("tag-name");
 var className = document.getElementById("class-name");
@@ -19,18 +33,19 @@ function submitForm(e) {
   output.innerHTML = `Number of ${tagName.value}: ${tagCount} .... class content: ${classCount} .... id : ${idExists} .... name: ${nameCount}`;
 }
 
-function moveRight() {
-  if (end + 1 < imgContainer.length) {
-    imgContainer[start++].style.display = "none";
-    imgContainer[++end].style.display = "block";
-  }
+function moveSlider(value) {
+  index += value;
+  index %= imgSources.length;
+  if (index < 0) index = imgSources.length;
+  img.setAttribute("src", imgSources[index]);
+  caption.innerHTML = captions[index];
 }
-function moveLeft() {
-  if (start - 1 >= 0) {
-    imgContainer[end--].style.display = "none";
-    imgContainer[--start].style.display = "block";
-  }
-}
+// function moveLeft() {
+//   if (start - 1 >= 0) {
+//     imgContainer[end--].style.display = "none";
+//     imgContainer[--start].style.display = "block";
+//   }
+// }
 
 function toggleMode() {
   console.log("eeee");

@@ -38,30 +38,14 @@
         <img src="Images/About-me-img.svg" alt="" />
       </div>
       <div class="skills-container">
-        <a onclick="moveLeft()">
+        <a onclick="moveSlider(-1)">
           <i class="fa-solid fa-arrow-left arrows"></i>
         </a>
         <div class="image-container">
-          <h2>Backend</h2>
-          <img src="Images/Backend.svg" alt="" />
+          <h2 id="slider-caption">Backend</h2>
+          <img src="Images/Backend.svg" id="slider-img" alt="" />
         </div>
-        <div class="image-container">
-          <h2>Frontend</h2>
-          <img src="Images/frontend.svg" alt="" />
-        </div>
-        <div class="image-container">
-          <h2>Database</h2>
-          <img src="Images/database.svg" alt="" />
-        </div>
-        <div class="image-container">
-          <h2>Problem solving</h2>
-          <img src="Images/problem-solving.svg" alt="" />
-        </div>
-        <div class="image-container">
-          <h2>Git&Github</h2>
-          <img src="Images/github.svg" alt="" />
-        </div>
-        <a onclick="moveRight()">
+        <a onclick="moveSlider(1)">
           <i class="fa-solid fa-arrow-right arrows"></i>
         </a>
       </div>
