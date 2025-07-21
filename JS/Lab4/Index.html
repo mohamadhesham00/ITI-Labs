@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="left-nav">
+        <a href="#">Home</a>
+        <a href="#About">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#">Contact</a>
+      </div>
+      <div class="right-nav">
+        <button id="mode-btn" onclick="toggleMode()">Light Mode 🌜</button>
+      </div>
+    </nav>
+    <main>
+      <div class="about-me">
+        <div class="text">
+          <h1>Mohamad Hesham</h1>
+          <p>
+            A 22-year-old computer science graduate with a passion for backend
+            development, experienced in web development, and always eager to
+            learn and grow in the tech field.
+          </p>
+        </div>
+        <img src="Images/About-me-img.svg" alt="" />
+      </div>
+      <div class="skills-container">
+        <a onclick="moveLeft()">
+          <i class="fa-solid fa-arrow-left arrows"></i>
+        </a>
+        <div class="image-container">
+          <h2>Backend</h2>
+          <img src="Images/Backend.svg" alt="" />
+        </div>
+        <div class="image-container">
+          <h2>Frontend</h2>
+          <img src="Images/frontend.svg" alt="" />
+        </div>
+        <div class="image-container">
+          <h2>Database</h2>
+          <img src="Images/database.svg" alt="" />
+        </div>
+        <div class="image-container">
+          <h2>Problem solving</h2>
+          <img src="Images/problem-solving.svg" alt="" />
+        </div>
+        <div class="image-container">
+          <h2>Git&Github</h2>
+          <img src="Images/github.svg" alt="" />
+        </div>
+        <a onclick="moveRight()">
+          <i class="fa-solid fa-arrow-right arrows"></i>
+        </a>
+      </div>
+    </main>
+    <footer>
+      <div class="social-icons">
+        <a target="_blank" href="https://github.com/mohamadhesham00"
+          ><i class="fab fa-github"></i
+        ></a>
+        <a target="_blank" href="https://linkedin.com/in/mohamd-hesham">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </div>
+    </footer>
+    <div class="container">
+      <div class="field">
+        <label>Tag name :</label>
+        <input type="text" id="tag-name" placeholder="div" />
+      </div>
+      <div class="field">
+        <label>class name:</label>
+        <input type="text" id="class-name" placeholder="class name" />
+      </div>
+      <div class="field">
+        <label>Id:</label>
+        <input type="text" id="id-input" placeholder="id" />
+      </div>
+      <div class="field">
+        <label>Name:</label>
+        <input type="text" id="name" placeholder="name" />
+      </div>
+      <button onclick="submitForm(event)" class="btn">Show Result</button>
+    </div>
+    <div class="output-container">
+      <h3 id="output"></h3>
+    </div>
+    <script src="demo.js"></script>
+  </body>
+</html>
