@@ -36,7 +36,7 @@ function submitForm(e) {
 function moveSlider(value) {
   index += value;
   index %= imgSources.length;
-  if (index < 0) index = imgSources.length;
+  if (index < 0) index = imgSources.length - 1;
   img.setAttribute("src", imgSources[index]);
   caption.innerHTML = captions[index];
 }
